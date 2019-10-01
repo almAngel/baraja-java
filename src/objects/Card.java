@@ -8,13 +8,15 @@ import enums.CardType;
 
 public class Card {
 
+	int value;
 	CardType type;
 	CardAssociation association;
 
 	Card() {
 	}
 
-	Card(CardType t, CardAssociation a) {
+	Card(int v, CardType t, CardAssociation a) {
+		this.value = v;
 		this.type = t;
 		this.association = a;
 	}
@@ -25,17 +27,16 @@ public class Card {
 		for (int i = 1; i <= 12; i++) {
 			
 			if(i == 1) {
-				cardList.add(new Card(t, CardAssociation.AS));
+				cardList.add(new Card(i, t, CardAssociation.AS));
 			} else if(i == 10) {
-				cardList.add(new Card(t, CardAssociation.SOTA));
+				cardList.add(new Card(i, t, CardAssociation.SOTA));
 			} else if(i == 11) {
-				cardList.add(new Card(t, CardAssociation.CABALLO));
+				cardList.add(new Card(i, t, CardAssociation.CABALLO));
 			} else if(i == 12) {
-				cardList.add(new Card(t, CardAssociation.REY));
+				cardList.add(new Card(i, t, CardAssociation.REY));
 			} else {
-				cardList.add(new Card(t, CardAssociation.COMMON));
+				cardList.add(new Card(i, t, CardAssociation.COMMON));
 			}
-			
 		}
 		
 		return cardList;
@@ -43,6 +44,7 @@ public class Card {
 
 	@Override
 	public String toString() {
-		return "Card [type=" + type + ", association=" + association + "]";
+		return "Card [value=" + value + ", type=" + type + ", association=" + association + "]";
 	}
+
 }
