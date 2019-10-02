@@ -2,6 +2,8 @@ baraja-java
 
 NOTA: Usando Java 11 
 
+*DETALLES DE EJERCICIO*
+
 Se desea desarrollar una aplicación donde se modele una baraja de cartas española
 utilizando programación orientada a objetos. Entre las 48 que conforman una baraja, cada
 carta se encontrará numerada con el valor correspondiente y pertenecerá a un determinado
